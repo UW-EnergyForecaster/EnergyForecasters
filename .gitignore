@@ -1,3 +1,9 @@
 .ipynb_checkpoints
+<<<<<<< HEAD
 *.xls
 *.xlsx
+=======
+*.csv
+*.xlsx
+*.xls
+>>>>>>> daniel_inclass_branch
