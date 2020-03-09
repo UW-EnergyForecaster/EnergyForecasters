@@ -1,4 +1,4 @@
-# EnergyForecasters <img src='logo.png'>
+# EnergyForecasters <img src='logo.png' width=50>
 
 
 This is a class project for University of Washington DIRECT program in Winter 2020.
