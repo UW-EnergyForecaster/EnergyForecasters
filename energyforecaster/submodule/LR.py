@@ -14,6 +14,8 @@ def model(x_columns):
     '''
         This fuction generates a Lasso Regression model.
 
+        :param x_columns: columns that are available in the real-time data source
+        :type x_columns: list
         :return: model of the Lasso Regression
         :rtype: Lasso Class
     '''

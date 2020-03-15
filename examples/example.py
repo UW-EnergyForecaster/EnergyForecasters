@@ -7,5 +7,5 @@ import energyforecast
 
 location = "BMS"
 capacity = 2
-ML = "LR"
+ML = "RF"
 print(energyforecast.live_predict(location, capacity, ML))
