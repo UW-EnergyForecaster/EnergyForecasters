@@ -1,0 +1,222 @@
+
+<HTML>
+<HEAD>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KG7PVKB');</script>
+<!-- End Google Tag Manager -->
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<META NAME="Author" CONTENT="Afshin Michael Andreas">
+<META HTTP-EQUIV="Refresh" CONTENT = "60">
+<TITLE>VTIF RSR Current Data</TITLE>
+<script type="text/javascript">
+<!--
+(function() {
+    var so = document.createElement('script'); so.type = 'text/javascript'; so.async = true;
+    so.src = '//www.nrel.gov/includes/ga/nrel.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(so, s);
+})();
+
+function Check(chk,start,end,checker)
+{
+	for (i = 0; i < chk.length; i++) {
+		if (chk[i].value >= start && chk[i].value <= end)
+		{
+			if(checker.checked==true)
+				 chk[i].checked = true;
+			else chk[i].checked = false;
+		}
+	}
+}
+//-->
+</script>
+</HEAD>
+<body bgcolor="white" onunload='document.midc.submitData.disabled=false' onBlur='document.midc.submitData.disabled=false'>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KG7PVKB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<center><h3><font size=+2>NREL Vehicle Testing and Integration Facility RSR</font><BR>
+<font size=+2>Current Irradiance and Meteorological Conditions</font></h3></center>
+<center>
+<FORM NAME="midc" METHOD="GET" target="_top" ACTION="plot.pl" onSubmit='document.midc.submitData.disabled=true' onReset='document.midc.submitData.disabled=false'>
+<input type="hidden" name="site" value="VTIF">
+<input type="hidden" name="start" value="20120401">
+<input type="hidden" name="live"   value="1">
+<input type="hidden" name="zenloc"   value="19">
+<b>March 14, 2020<br>19:15 MST</b><br>
+<INPUT TYPE="radio" id="entire" NAME="time" VALUE="0"><label for="entire">Entire Day</label> &#160 &#160
+<INPUT TYPE="radio" id="daytime" NAME="time" VALUE="1" CHECKED><label for="daytime">Daytime</label></TD></TR>
+<TABLE BORDER CELLPADDING=3>
+<TR>
+<TD ROWSPAN=1 VALIGN=TOP>
+<CENTER><fieldset><legend align=center><b>IRRADIANCE</b></legend>
+<TABLE BORDER=0 CELLSPACING=3 VALIGN=TOP>
+<TR><TD nowrap><input type="checkbox" id="i0" name="inst" value="3" ><label for="i0"><a href="html.pl?site=VTIF;page=instruments#GH">Global Horizontal</a></label></TD><TD nowrap><DIV ALIGN=right>0.00</DIV></TD><TD nowrap><font size=-1>W/m<sup>2</sup></font></TD></TR>
+<TR><TD nowrap><input type="checkbox" id="i1" name="inst" value="4" ><label for="i1"><a href="html.pl?site=VTIF;page=instruments#DN">Direct Normal</a></label></TD><TD nowrap><DIV ALIGN=right>0.00</DIV></TD><TD nowrap><font size=-1>W/m<sup>2</sup></font></TD></TR>
+<TR><TD nowrap><input type="checkbox" id="i2" name="inst" value="5" ><label for="i2"><a href="html.pl?site=VTIF;page=instruments#DH">Diffuse Horizontal</a></label></TD><TD nowrap><DIV ALIGN=right>0.00</DIV></TD><TD nowrap><font size=-1>W/m<sup>2</sup></font></TD></TR>
+<TR><TD nowrap><input type="checkbox" id="i3" name="inst" value="6" ><label for="i3"><a href="html.pl?site=VTIF;page=instruments#GH2">Global <font size=-1>(secondary)</font></a></label></TD><TD nowrap><DIV ALIGN=right>-0.13</DIV></TD><TD nowrap><font size=-1>W/m<sup>2</sup></font></TD></TR>
+<TR><TD nowrap><input type="checkbox" id="i4" name="inst" value="7" ><label for="i4"><a href="html.pl?site=VTIF;page=instruments#GH">Global <font size=-1>(uncorrected)</font></a></label></TD><TD nowrap><DIV ALIGN=right>0.00</DIV></TD><TD nowrap><font size=-1>W/m<sup>2</sup></font></TD></TR>
+<TR><TD nowrap><input type="checkbox" id="i5" name="inst" value="8" ><label for="i5"><a href="html.pl?site=VTIF;page=instruments#DN">Direct <font size=-1>(uncorrected)</font></a></label></TD><TD nowrap><DIV ALIGN=right>0.00</DIV></TD><TD nowrap><font size=-1>W/m<sup>2</sup></font></TD></TR>
+<TR><TD nowrap><input type="checkbox" id="i6" name="inst" value="9" ><label for="i6"><a href="html.pl?site=VTIF;page=instruments#DH">Diffuse <font size=-1>(uncorrected)</font></a></label></TD><TD nowrap><DIV ALIGN=right>0.00</DIV></TD><TD nowrap><font size=-1>W/m<sup>2</sup></font></TD></TR>
+</TABLE></fieldset></CENTER>
+</TD>
+<TD ROWSPAN=2 VALIGN=TOP>
+<CENTER><fieldset><legend align=center><b>METEOROLOGICAL</b></legend>
+<TABLE BORDER=0 CELLSPACING=3>
+<TR><TD nowrap><input type="checkbox" id="m0" name="inst" value="10" ><label for="m0"><a href="html.pl?site=VTIF;page=instruments#TRH">Air Temperature</a></label></TD><TD nowrap><DIV ALIGN=right>-0.24</DIV></TD><TD nowrap><font size=-1><sup>o</sup>C</font></TD></TR>
+<TR><TD nowrap><input type="checkbox" id="m1" name="inst" value="11" ><label for="m1"><a href="html.pl?site=VTIF;page=instruments#TRH">Relative Humidity</a></label></TD><TD nowrap><DIV ALIGN=right>87.00</DIV></TD><TD nowrap><font size=-1>%</font></TD></TR>
+<TR><TD nowrap><input type="checkbox" id="m2" name="inst" value="12" ><label for="m2"><a href="html.pl?site=VTIF;page=instruments#WS">Wind Speed</a></label></TD><TD nowrap><DIV ALIGN=right>0.00</DIV></TD><TD nowrap><font size=-1>m/s</font></TD></TR>
+<TR><TD nowrap><input type="checkbox" id="m3" name="inst" value="13" ><label for="m3"><a href="html.pl?site=VTIF;page=instruments#WS">Pk Wind Speed</a></label></TD><TD nowrap><DIV ALIGN=right>0.00</DIV></TD><TD nowrap><font size=-1>m/s</font></TD></TR>
+<TR><TD nowrap><input type="checkbox" id="m4" name="inst" value="14" ><label for="m4"><a href="html.pl?site=VTIF;page=instruments#WS">SDev Wind Speed</a></label></TD><TD nowrap><DIV ALIGN=right>0.00</DIV></TD><TD nowrap><font size=-1>m/s</font></TD></TR>
+<TR><TD nowrap><input type="checkbox" id="m5" name="inst" value="15" ><label for="m5"><a href="html.pl?site=VTIF;page=instruments#WS">Wind Direction</a></label></TD><TD nowrap><DIV ALIGN=right>0.00</DIV></TD><TD nowrap><font size=-1><sup>o</sup>&nbsp;from&nbsp;N</font></TD></TR>
+<TR><TD nowrap><input type="checkbox" id="m6" name="inst" value="16" ><label for="m6"><a href="html.pl?site=VTIF;page=instruments#WD">SDev Wind Direction</a></label></TD><TD nowrap><DIV ALIGN=right>0.00</DIV></TD><TD nowrap><font size=-1>deg</font></TD></TR>
+<TR><TD nowrap><input type="checkbox" id="m7" name="inst" value="17" ><label for="m7"><a href="html.pl?site=VTIF;page=instruments#PRESS">Station Pressure</a></label></TD><TD nowrap><DIV ALIGN=right>823.16</DIV></TD><TD nowrap><font size=-1>mBar</font></TD></TR>
+<TR><TD nowrap><input type="checkbox" id="m8" name="inst" value="18" ><label for="m8"><a href="html.pl?site=VTIF;page=instruments#ZEN">Zenith Angle</a></label></TD><TD nowrap><DIV ALIGN=right>103.70</DIV></TD><TD nowrap><font size=-1><sup>o</sup></font></TD></TR>
+<TR><TD nowrap><input type="checkbox" id="m9" name="inst" value="19" ><label for="m9"><a href="html.pl?site=VTIF;page=instruments#AZM">Azimuth Angle</a></label></TD><TD nowrap><DIV ALIGN=right>279.00</DIV></TD><TD nowrap><font size=-1><sup>o</sup></font></TD></TR>
+<TR><TD nowrap><input type="checkbox" id="m10" name="inst" value="20" ><label for="m10"><a href="html.pl?site=VTIF;page=instruments#CRTEMP">CR1000 Temp</a></label></TD><TD nowrap><DIV ALIGN=right>2.25</DIV></TD><TD nowrap><font size=-1><sup>o</sup>C</font></TD></TR>
+<TR><TD nowrap><input type="checkbox" id="m11" name="inst" value="21" ><label for="m11"><a href="html.pl?site=VTIF;page=instruments#BATT">RSR Battery</a></label></TD><TD nowrap><DIV ALIGN=right>12.98</DIV></TD><TD nowrap><font size=-1>VDC</font></TD></TR>
+</TABLE></fieldset></CENTER>
+</TD>
+</TR><TR>
+<TD VALIGN=BOTTOM>
+<CENTER><TABLE BORDER=0 CELLSPACING=3>
+<TR><TD nowrap><fieldset><legend align="center"><b>Output Type:</b></legend>
+<INPUT TYPE="radio" id="outdat" NAME="type" VALUE="data"   ><label for="outdat">Selected 1-Min Data <font size=-1>(ASCII Text)</font></label><BR>
+<INPUT TYPE="radio" id="outzip" NAME="type" VALUE="datazip"><label for="outzip">Selected 1-Min Data <font size=-1>(ZIP Compressed)</font></label><BR>
+<INPUT TYPE="radio" id="outhrd" NAME="type" VALUE="hour"   ><label for="outhrd">Selected Hourly Data <font size=-1>(ASCII Text)</font></label><BR>
+<INPUT TYPE="radio" id="outhrz" NAME="type" VALUE="hourzip"><label for="outhrz">Selected Hourly Data <font size=-1>(ZIP Compressed)</font></label><BR>
+<INPUT TYPE="radio" id="outdys" NAME="type" VALUE="day"    ><label for="outdys">Selected Daily Statistics <font size=-1>(ASCII Text)</font></label><BR>
+<INPUT TYPE="radio" id="outrwd" NAME="type" VALUE="raw"    ><label for="outrwd"><a href="rawid.pl?site=VTIF;start=20120401;yr=0;mo=3;dy=0">All 1-Min Raw Data</a> <font size=-1>(ASCII Text)</font></label><BR>
+<INPUT TYPE="radio" id="outrwz" NAME="type" VALUE="rawzip" ><label for="outrwz"><a href="rawid.pl?site=VTIF;start=20120401;yr=0;mo=3;dy=0">All 1-Min Raw Data</a> <font size=-1>(ZIP Compressed)</font></label><BR>
+<INPUT TYPE="radio" id="outrwl" NAME="type" VALUE="live"   ><label for="outrwl"><a href="rawid.pl?site=VTIF;start=20120401;yr=0;mo=3;dy=0">"Live" Raw Data</a> <font size=-1>(ASCII Text)</font></label><BR>
+<INPUT TYPE="radio" id="outdsp" NAME="type" VALUE="display"><label for="outdsp">Selected Display <font size=-1>(HTML)</font></label><BR>
+<INPUT TYPE="radio" id="outplt" NAME="type" VALUE="plot" CHECKED><label for="outplt">Selected Plot</label> <BR>
+<INPUT TYPE="radio" id="outwnd" NAME="type" VALUE="rose"><label for="outwnd">Wind Rose</label></fieldset></TD></TR>
+<TR><TD nowrap><CENTER><INPUT TYPE="submit" NAME="submitData" VALUE="Submit"><input type="reset" value="Reset"><br><a target="_top" href="../nrel_midc_survey.docx">Feedback Request</a></CENTER></TD></TR>
+<TR><TD nowrap><INPUT TYPE="checkbox" id="blackwhite" NAME="bw" VALUE="1"><label for="blackwhite">Black & White Plot</label><BR><INPUT TYPE="checkbox" id="english" NAME="convert" VALUE="1"><label for="english">English Conversion</label> <font size=-1>(Meteorological)</font></TD></TR>
+</TABLE></CENTER>
+</TD>
+</TR>
+<TR><TD align="center" COLSPAN=2>
+<fieldset><legend align=center><b>GENERATE CUSTOM DATA</b></legend>
+<table border=0 cellspacing=0>
+<tr><td colspan=2>
+</td></tr>
+<tr><td colspan=2>
+<table border=0 cellspacing=0>
+<tr><td><input type="radio" id="userdef" name="user" value="2"></td>
+<td nowrap><label for="userdef">User-defined</label> <label for="calcmath">calculation</label> using an <label for="calcinst1">instrument</label> and <label for="calcinst2">another instrument</label> or <label for="calcvalue">value</label>:</td>
+<tr><td></td><td nowrap><SELECT id="calcinst1" NAME="first">
+<OPTION VALUE="3">Global Horizontal
+<OPTION VALUE="4">Direct Normal
+<OPTION VALUE="5">Diffuse Horizontal
+<OPTION VALUE="6">Global <font size=-1>(secondary)</font>
+<OPTION VALUE="7">Global <font size=-1>(uncorrected)</font>
+<OPTION VALUE="8">Direct <font size=-1>(uncorrected)</font>
+<OPTION VALUE="9">Diffuse <font size=-1>(uncorrected)</font>
+<OPTION VALUE="10">Air Temperature
+<OPTION VALUE="11">Relative Humidity
+<OPTION VALUE="12">Wind Speed
+<OPTION VALUE="13">Pk Wind Speed
+<OPTION VALUE="14">SDev Wind Speed
+<OPTION VALUE="15">Wind Direction
+<OPTION VALUE="16">SDev Wind Direction
+<OPTION VALUE="17">Station Pressure
+<OPTION VALUE="18">Zenith Angle
+<OPTION VALUE="19">Azimuth Angle
+<OPTION VALUE="20">CR1000 Temp
+<OPTION VALUE="21">RSR Battery
+</SELECT>
+<SELECT id="calcmath" NAME="math">
+<OPTION VALUE="0">+
+<OPTION VALUE="1">-
+<OPTION VALUE="2">*
+<OPTION VALUE="3">/
+</SELECT>
+<SELECT id="calcinst2" NAME="second">
+<OPTION VALUE="-1" SELECTED>[value]  ------->
+<OPTION VALUE="3">Global Horizontal
+<OPTION VALUE="4">Direct Normal
+<OPTION VALUE="5">Diffuse Horizontal
+<OPTION VALUE="6">Global <font size=-1>(secondary)</font>
+<OPTION VALUE="7">Global <font size=-1>(uncorrected)</font>
+<OPTION VALUE="8">Direct <font size=-1>(uncorrected)</font>
+<OPTION VALUE="9">Diffuse <font size=-1>(uncorrected)</font>
+<OPTION VALUE="10">Air Temperature
+<OPTION VALUE="11">Relative Humidity
+<OPTION VALUE="12">Wind Speed
+<OPTION VALUE="13">Pk Wind Speed
+<OPTION VALUE="14">SDev Wind Speed
+<OPTION VALUE="15">Wind Direction
+<OPTION VALUE="16">SDev Wind Direction
+<OPTION VALUE="17">Station Pressure
+<OPTION VALUE="18">Zenith Angle
+<OPTION VALUE="19">Azimuth Angle
+<OPTION VALUE="20">CR1000 Temp
+<OPTION VALUE="21">RSR Battery
+</SELECT>
+<input type="text" size="7" id="calcvalue" name="value" value="0.0"></td>
+</tr>
+</table>
+</td></tr>
+<tr><td colspan=2>
+<table border=0 cellspacing=0>
+<tr><td><input type="radio" id="calc3rd" name="user" value="3"></td>
+<td nowrap><label for="calc3rd">Calculate the third irradiance component</label> using <label for="calcglobal">global</label>, <label for="calcdirect">direct</label>, or <label for="calcdiffuse">diffuse</label>:</td>
+<tr><td></td><td nowrap><SELECT id="calcglobal" NAME="global">
+<OPTION VALUE="-1" SELECTED>** Calculate Global **
+<OPTION VALUE="3">Global Horizontal
+<OPTION VALUE="6">Global <font size=-1>(secondary)</font>
+<OPTION VALUE="7">Global <font size=-1>(uncorrected)</font>
+</SELECT>
+<SELECT id="calcdirect" NAME="direct">
+<OPTION VALUE="-1" SELECTED>** Calculate Direct **
+<OPTION VALUE="4">Direct Normal
+<OPTION VALUE="8">Direct <font size=-1>(uncorrected)</font>
+</SELECT>
+<SELECT id="calcdiffuse" NAME="diffuse">
+<OPTION VALUE="-1" SELECTED>** Calculate Diffuse **
+<OPTION VALUE="5">Diffuse Horizontal
+<OPTION VALUE="9">Diffuse <font size=-1>(uncorrected)</font>
+</SELECT></td>
+</table>
+</td></tr>
+<tr><td valign="top">
+<table border=0 cellspacing=0>
+<tr><td><input type="radio" id="nocust" name="user" value="0" CHECKED></td><td><label for="nocust">No custom data</label></td>
+</tr>
+</table>
+</td>
+<td nowrap align="right">
+<table border=0><tr><td>
+<fieldset><legend align="center"><font size="-1">Select y-axis</font></legend>
+<font size="-1">
+<input type="radio" id="primary" name="axis" value="1" CHECKED><label for="primary">primary</label>&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" id="secondary" name="axis" value="2"><label for="secondary">secondary</label></font>
+</fieldset></td></tr></table>
+</td></tr>
+</table></fieldset>
+</TD></TR>
+</TABLE>
+<BR>Data is automatically updated every 60 seconds.
+<BR><font size="-1"><a href="daily.pl?site=VTIF;live=1;norefresh=1">(DISABLE</a> automatic browser refresh.)</font><br>
+</CENTER>
+<br><ul>
+<li><b>Notice:</b> <font color="red">Any publication based in whole or in part on these data sets should conspicuously acknowledge the data source as the <i>National Renewable Energy Laboratory</i> using the citation and DOI listed on the bottom of the <a target="_top" href="go2url.pl?site=VTIF#DOI">VTIF RSR</a> homepage.</font><li><b>Notice:</b> If you find this service valuable, have suggestions, or any other comments, please complete this <a target="_top" href="../nrel_midc_survey.docx">Feedback Request</a>. (150 KB DOCX)<li><b>Notice:</b>  Data have not been reviewed for accuracy or completeness.  Please read the <a target="_top" href="http://www.nrel.gov/disclaimer.html">disclaimer</a>.
+<li>To determine instrument measurement uncertainty, please download the <a target="_top" href="../radiometer_uncert.xlsx">Excel&reg; uncertainty spreadsheet</a> to compute these values. (5.5 MB XLSX)
+<li>Further instrument information, including current serial numbers and calibration factors, are available by clicking the instrument name.  Some of these serial numbers can also be clicked for further instrument calibration history and uncertainties.
+<li><i>Irradiance</i> data will always appear on primary axis and <i>meteorological</i> data will always appear on secondary axis.
+<li><i>Selected data</i> or <i>all raw data</i> has the option of being compressed using the ZIP format.   An extraction utility can be obtained from <a href="http://www.pkware.com" target="_top">PKWare</a> or <a href="http://www.winzip.com" target="_top">WinZip</a>
+<li><i>Selected hourly data</i> will generate hourly data by averaging the input data for the entire day(s), <i>custom data</i> will be ignored.  Note:  DO NOT use this feature with wind direction measurements, the resulting averages will be bogus.<li><i>Selected daily statistics</i> will generate daily totals (for <i>irradiance</i> data) and daily averages (for <i>meteorological</i> data) using the input data for the entire day(s), <i>custom data</i> will be ignored.  The daily maximum and minimum (if applicable) will also be generated.  Note: Negative values from shortwave irradiance instruments will be set to zero when accumulating daily totals.  DO NOT use this feature with wind direction measurements, the resulting averages will be bogus.<li>The <i>raw data</i> options are the complete raw data record(s) from the datalogger, these are the <a href="rawid.pl?site=VTIF;start=20120401;yr=0;mo=3;dy=0">raw data field IDs</a>.
+<li><i>"Live" raw data</i> is a single record from the most recent data collection and <i>all raw data</i> is all the data from midnight to the latest record.<li><i>Selected display</i> will generate a customized data display, similar to the above table, <i>custom data</i> will be ignored.<li><i>English conversion</i> only applies to <i>selected data</i> or <i>plot</i> and has no effect on <i>irradiance</i> or <i>custom data</i>.
+<li>When selecting <i>raw data</i> or <i>wind rose</i>, all selections (except the date) will be ignored.
+<li>The <i>wind rose</i> is generated using average wind speed and direction for the selected level.
+<li>The <i>calculate third component</i> option uses the formula: <i>Global</i> = <i>Direct</i> * Cosine(<i>Zenith</i>) + <i>Diffuse</i> to calculate a third component based on the selected two.  This option should only be used for pyrheliometers and horizontal pyranometers.
+<li>For automated data extraction, please use the <a href="data_api_doc.pl?VTIF">MIDC API</a>.</ul>
+<center>
+<BR><font size="-1">[<a target="_top" href="http://www.nrel.gov/">NREL</a>] [<a target="_top" href="../">MID<i>C</i></a>] [<a target="_top" href="go2url.pl?site=VTIF">VTIF RSR</a>]</font>
+</center>
+</BODY></HTML>
