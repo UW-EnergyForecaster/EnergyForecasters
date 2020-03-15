@@ -2,7 +2,6 @@
     This is the main python which the user will interact with.
 '''
 
-import sys
 import importlib
 import requests
 import re
@@ -41,7 +40,7 @@ def live_predict(location, capacity, ML):
     '''
 
     # Checking if the location is valid
-    if not isinstance(location,str):
+    if not isinstance(location, str):
         raise TypeError("location must be a String")
     elif location not in ["BMS", "STAC", "UOSMRL", "VTIF"]:
         raise ValueError("The location value is invalid. Please refer to the\
@@ -66,31 +65,31 @@ def live_predict(location, capacity, ML):
     else:
         pass
 
+    print("Obtaining real-time weather data...")
     # Attempting to receive real-time data
     url = 'https://midcdmz.nrel.gov/apps/daily.pl?site='+location+'&live=1'
     response = requests.get(url)
     # if the download fails, this line will generate an error
     assert response.status_code == 200
 
-    feature_dict={}
+    feature_dict = {}
 
     # Iterating through each lines of the web response to find property values
     # It will only extract the first value that it finds.
-
     # Splitting the response text by lines
     for line in response.text.splitlines():
         # Searching for the pattern
-        result=re.search('<TD nowrap><DIV ALIGN=right>',line)
+        result = re.search('<TD nowrap><DIV ALIGN=right>', line)
         if result is not None:
             # Properties that we want
-            feature_list = ['Global','Direct','Diffuse','Wind Direction','Wind\
-                Speed','Zenith','Albedo','Relative Humidity','Air Temperature',\
-                'Pressure']
+            feature_list = ['Global', 'Direct', 'Diffuse', 'Wind Direction',
+                            'Wind Speed', 'Zenith', 'Albedo', 'Relative\
+                            Humidity', 'Air Temperature', 'Pressure']
             for feature in feature_list:
                 if feature in line:
-                    result=re.findall("[-+]?\d+\.\d+",line)
+                    result = re.findall(r"[-+]?\d+\.\d+", line)
                     if feature not in feature_dict:
-                        feature_dict[feature]=float(result[0])
+                        feature_dict[feature] = float(result[0])
 
     # We need to rename the column names to the database columns
     keys = list(feature_dict)
@@ -117,8 +116,17 @@ def live_predict(location, capacity, ML):
             pass
 
     # Importing Machine Learning Algorithm
-    ml_module = importlib.import_module("submodule."+ ML)
+    ml_module = importlib.import_module("submodule." + ML)
+
+    # Creating a regression model from only the parameters available to us
+    # from the real-time data
     ml_model = ml_module.model(feature_dict.keys())
+
+    # Creating the dataframe out of the real-time weather and predicting our
+    # energy generation value
+    print("Generating regression model...")
     feature_df = pd.DataFrame([feature_dict])
     predicted_value = ml_model.predict(feature_df)
+
+    print("\nPredicted Value: ")
     return predicted_value * capacity

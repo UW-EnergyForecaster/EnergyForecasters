@@ -5,21 +5,20 @@
 '''
 
 import pandas as pd
-import numpy as np
-import sklearn
 from sklearn.linear_model import Lasso
 from sklearn.model_selection import train_test_split
+
 
 def model(x_columns):
     '''
         This fuction generates a Lasso Regression model.
 
-        :param x_columns: columns that are available in the real-time data source
+        :param x_columns: columns from real-time data source
         :type x_columns: list
         :return: model of the Lasso Regression
         :rtype: Lasso Class
     '''
-    dataset = pd.read_csv('../energyforecaster/data/no_0_solar_with_interpolation.csv')
+    dataset = pd.read_csv('./energyforecaster/data/no_0_solar_with_interpolation.csv')
 
     # Dropping NA values
     dataset.dropna(inplace=True)

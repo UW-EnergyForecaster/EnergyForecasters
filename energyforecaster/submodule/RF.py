@@ -1,20 +1,18 @@
 '''
-    The Random Forest Regressor allows us to get a importance value of various properties.
-    This notebook involves importing the data, generating the model, and plotting the most important features.
+    This notebook involves importing the data, generating the model,
+    and plotting the most important features.
 '''
 
 import pandas as pd
-import numpy as np
-import sklearn
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.feature_selection import SelectFromModel
 from sklearn.model_selection import train_test_split
+
 
 def model(x_columns):
     '''
         This fuction generates a RandomForestRegressor model.
 
-        :param x_columns: columns that are available in the real-time data source
+        :param x_columns: columns from the real-time data source
         :type x_columns: list
         :return: model of the Lasso Regression
         :rtype: RandomForestRegressor class
@@ -22,8 +20,10 @@ def model(x_columns):
     # Importing the data
     # The no0 data has no 0 solar generation values.
     no0_data = pd.read_csv('../energyforecaster/data/no_0_solar_with_interpolation.csv')
+
     # Dropping NA values
     no0_data.dropna(inplace=True)
+
     # Dropping weird column
     no0_data.pop("Unnamed: 0")
 
