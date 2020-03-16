@@ -120,11 +120,11 @@ def live_predict(location, capacity, ML):
 
     # Creating a regression model from only the parameters available to us
     # from the real-time data
+    print("Generating regression model...")
     ml_model = ml_module.model(feature_dict.keys())
 
     # Creating the dataframe out of the real-time weather and predicting our
     # energy generation value
-    print("Generating regression model...")
     feature_df = pd.DataFrame([feature_dict])
     predicted_value = ml_model.predict(feature_df)
 

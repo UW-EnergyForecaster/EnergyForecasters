@@ -19,7 +19,8 @@ def model(x_columns):
     '''
     # Importing the data
     # The no0 data has no 0 solar generation values.
-    no0_data = pd.read_csv('../energyforecaster/data/no_0_solar_with_interpolation.csv')
+    no0_data = pd.read_csv(
+        './energyforecaster/data/no_0_solar_with_interpolation.csv')
 
     # Dropping NA values
     no0_data.dropna(inplace=True)

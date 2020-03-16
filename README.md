@@ -5,103 +5,106 @@
 
 This is a class project for University of Washington DIRECT program in Winter 2020.
 
-The objective is to give a real-time feedback of generated solar power based on regression models from historical data. By using this project, users are allowed to choose one of six weather observation satations, input the capacity, and choose one of five regession methods, which include RandomForest, NeuralNetwork, Mutilinear, Lasso, Ridge regression.
+The objective is to give a real-time feedback of generated solar power based on regression models from historical data. The user must choose one of six weather observation stations, input the capacity, and choose one of five regression methods, which include Random Forest, Neural Network, Multi Linear, Lasso, and Ridge regression.
 
-## File List
-database:  
-            Teaxs_weather_solar_generation_data_2013-2018.csv
-            processed_data.csv
-
+## Directory
 doc:
-            Energy_forecasters_project_proposal.pptx
-            Technology Review.pdf
-            user_cases.txt
+    Energy_forecasters_project_proposal.pptx
+    Project Flow.png
+    Technology Review.pdf
+    user_cases.txt
 
 Energyforecaster:
-            data:  
-                    cleaned_solar_generation_data.csv
-                    no_0_solar_with_interpolation.csv
-                    normalized_by_2000_dtpts.csv
-                    out_with_interpolation.csv
-            submodule:
-                    ANN.py  
-                    MLR.py  
-                    RFR.py  
-                    RF_evaluation.py  
-                    setup.py  
-             test:  
-                    test_energyforecast.py  
-             energyforecast.py
+    data:  
+        cleaned_solar_generation_data.csv
+        no_0_solar_with_interpolation.csv
+        normalized_by_2000_dtpts.csv
+        out_with_interpolation.csv
+        processed_data.csv
+        Texas_weather_solar_generation_data_2013-2018.csv
+    submodule:
+        LR.py  
+        MLR.py  
+        NN.py  
+        RF.py  
+        RR.py  
+    tests:  
+        test_energyforecast.py  
+    energyforecast.py
 
 examples:
-             Fuel_Generation_Data:  
-                    IntGenByFuel2007.xls ~ IntGenByFuel2019.xls
-                    cleaned_solar_generation_data.csv
-             NREL_Weather_Data:  
-                    734232_29.77_-95.38_2007.csv ~ 734232_29.77_-95.38_2018.csv
-             NREL_weather_webscrape:  
-                    NREL_weather_data_webscrape.ipynb
-             regression_methods:  
-                    Neural_Network.ipynb
-             example.py
+    data_cleaning:
+        data_combining.ipynb
+        Fuel_Mix_data_cleaning.ipynb
+    fuel_generation_data:  
+        IntGenByFuel2007.xls ~ IntGenByFuel2019.xls
+        cleaned_solar_generation_data.csv
+    nrel_weather_data:  
+        734232_29.77_-95.38_2007.csv ~ 734232_29.77_-95.38_2018.csv
+    nrel_weather_webscrape:  
+        NREL_weather_data_webscrape.ipynb
+    regression_methods:  
+        feature_selection_multilinear_regression_and_kfold.ipynb
+        LassoRegression.ipynb
+        MLR_kfold_CV.py
+        Neural_Network.ipynb
+        RandomForest_Regression.ipynb
+        RF_evaluation.py
+        RF_kfold_CV.py
+        RidgeRegression.ipynb
+    example.py
 LICENSE  
 README.md  
-environment.yml  
+environment.yml
+.gitignore
+.coveragerc
 logo.png  
 setup.py
 
 ## Getting Started
 
-By following the below procedures, prediction of real time solar engery output in one of the six location can be given. In order to fast and easy use the codes, please follow the procedure in order.
+By following the below procedures, prediction of real time solar energy output in one of the six location can be given. In order to fast and easy use the codes, please follow the procedure in order.
 
 ### Prerequisites
 
-Windos user : Windows preveiw, Ubuntu  
+Windows user: Windows preview, Ubuntu  
               <p>An <a href="https://towardsdatascience.com/setting-up-a-data-science-environment-using-windows-subsystem-for-linux-wsl-c4b390803dd">Instructions</a>.</p>
 
-Mac OS      : Terminal  
+Mac OS: Terminal  
 
 ### Project Data
 
-In this project, the data includes both weather and soalr energy data, which are stored in database and examples directory in csv format. Thus user can  replace the data if same format and type data can be provided. The data is mounted in google drive, so in order to access the data there will be some command to mount the drive.  
+In this project, the data includes both weather and solar energy data, which are stored in database and examples directory in csv format. Thus user can  replace the data if same format and type data can be provided. The data is mounted in google drive, so in order to access the data there will be some command to mount the drive.  
 
-Data        : Weather data from Teaxes state  
-              Solar Energy output from Teaxes state
+Data        : Weather data from Texas state  
+              Solar Energy output from Texas state
 
-Beside the raw data, pre-cleanning process of data is neccessary since not all the information is valuable and normalization process is also help the project get a better result. In this process, zero value of solar energy output is dropped and be normalized by dividing the capacity.
+Beside the raw data, pre-cleaning process of data is necessary since not all the information is valuable and normalization process is also help the project get a better result. In this process, zero value of solar energy output is dropped and be normalized by dividing the capacity.
 
 
 ### Installing  
 
-1. git clone -url
+1. git clone https://github.com/UW-EnergyForecaster/EnergyForecasters
 2. open energyforecaster file
 3. pip install noise
 4.
 
 ### Module code
 
-We place the module code in a file called ` energyforecast.py ` in a directory called `Energyforecaster `.
-
+We place the module code in a file called `energyforecast.py` in a directory called `Energyforecaster `.
 All the function files (.py files) are placed under the `submodule` directory.
-
-Test file is called `test_energyforecast.py` is also under `Energyforecaster/tests`, which can be used as a test for the ` energyforecast.py `.
-
-Examples are aviliabe.
+Test file is called `test_energyforecast.py` is also under `Energyforecaster/tests`, which can be used as a test for the `energyforecast.py`.
+Examples are available.
 
 ## Running the tests
-
 once you have cloned the directory to your local machine, follow the directions below:  
-```
+
 1. cd energyforecaster
 2. cd test
-3. noisetests test_energyforecast.py
-```
-Once the test is done, belwoing will be shown if the test run succeess.
+3. nosetests test_energyforecast.py
 
 ### And coding style tests
-
-This project is following   style for
-
+This project is following PEP8 style using the flake8 code checker.
 
 ### Template
 
@@ -109,8 +112,7 @@ This project is following   style for
 
 
 ## Built With
-
-* **Google colaborate** - **Jupyter notebook online version**
+* **Google colaboratory** - **Jupyter notebook online version**
 * **sklearn** - **Feature selection,Prediction model**
 
 

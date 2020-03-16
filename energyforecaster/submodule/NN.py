@@ -7,13 +7,16 @@ from sklearn.neural_network import MLPRegressor
 
 def model(x_columns):
     '''
-    This fuction generates an Artificial Neural Network  Regression model.
-    :param x_columns: columns that are available in the real-time data source
-    :type x_columns: list
-    :return: model of the Neural Network Regression
-    :rtype: Neural Network
+        This fuction generates an Artificial Neural Network  Regression model.
+
+        :param x_columns: columns from the real-time data source
+        :type x_columns: list
+        :return: model of the Neural Network Regression
+        :rtype: Neural Network
     '''
-    dataset = pd.read_csv('../data/no_0_solar_with_interpolation.csv')
+    dataset = pd.read_csv(
+        './energyforecaster/data/no_0_solar_with_interpolation.csv')
+
     # Dropping unneccesary column
     for label in ['Unnamed: 0', 'Date', 'hhmm', 'Installed', 'Fill Flag']:
         if label in dataset.columns:
