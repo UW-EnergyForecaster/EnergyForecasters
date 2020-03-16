@@ -1,0 +1,12 @@
+User Stories:
+1. Bob is interested in finding out how much his solar panels will generate in this current weather. He lives in one of the specific locations near the Measurement and Instrumentation Data Centers (MIDC) that National Renewable Energy Laboratory (NREL) is running. By chance, he happens to find our EnergyForecaster package, while browsing random github repos for fun, which is able to output energy generation numbers normalized by the capacity of the solar panels. Luckily, he has a basic knowledge of python which allows him to follow the instructions written in README.
+
+2. Chris is an electrical grid analyst. His job involves calculating the power generations from different sources and balancing the load with the generation. In order to successfully accomplish his task, he needs to calculate energy generation from renewable energy sources due to the time/weather nature. Chris looks around in github finds the EnergyForecaster package, which conveniently has the location he manages.
+
+User Cases:
+1. Bob will use this software to choose his desired location, capacity, and machine learning algorithm to receive predicted values of the current solar generation.
+2. Chris is able to get the real-time solar generation value by choosing his location, inputting his capacity, and selecting his preferred machine learning algorithm. However, because Chris wants to "predict" the solar generation and prepare the coal power plants, he decides to fork the EnergyForecaster package in order to change our real-time weather to the weather forecast data that he has access to. Chris realized that, because the machine learning algorithm only requires the historical data, there is no limitation on using the package as a forecasting tool.
+
+Components Specification:
+1. User Interface (Command Line?)
+    -
