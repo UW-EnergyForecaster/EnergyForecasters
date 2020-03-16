@@ -13,7 +13,7 @@ def model(x_columns):
     :return: model of the Neural Network Regression
     :rtype: Neural Network
     '''
-    dataset = pd.read_csv('../data/no_0_solar_with_interpolation.csv')
+    dataset = pd.read_csv('../energyforecaster/data/no_0_solar_with_interpolation.csv')
     # Dropping unneccesary column
     for label in ['Unnamed: 0', 'Date', 'hhmm', 'Installed', 'Fill Flag']:
         if label in dataset.columns:

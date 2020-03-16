@@ -18,7 +18,7 @@ def model(x_columns):
         :return: model of the Lasso Regression
         :rtype: Lasso Class
     '''
-    dataset = pd.read_csv('./energyforecaster/data/no_0_solar_with_interpolation.csv')
+    dataset = pd.read_csv('../energyforecaster/data/no_0_solar_with_interpolation.csv')
 
     # Dropping NA values
     dataset.dropna(inplace=True)
