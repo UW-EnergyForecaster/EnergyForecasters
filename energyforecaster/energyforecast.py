@@ -6,6 +6,8 @@ import importlib
 import requests
 import re
 import pandas as pd
+import numpy as np
+from sklearn import preprocessing
 
 
 def live_predict(location, capacity, ML):
@@ -109,9 +111,11 @@ def live_predict(location, capacity, ML):
         elif key == "Albedo":
             feature_dict["Surface Albedo"] = feature_dict["Albedo"]
             del feature_dict["Albedo"]
-        elif key == 'Air Temperature':
-            feature_dict["Temperature"] = feature_dict['Air Temperature']
-            del feature_dict['Air Temperature']
+        elif key == "Temp":
+            feature_dict["Temperature"] = feature_dict["Temp"]
+            del feature_dict["Temp"]
+        elif key == "Pressure":
+            feature_dict["Pressure"] = feature_dict["Pressure"]*1.33322
         else:
             pass
 
@@ -125,8 +129,17 @@ def live_predict(location, capacity, ML):
 
     # Creating the dataframe out of the real-time weather and predicting our
     # energy generation value
-    feature_df = pd.DataFrame([feature_dict])
-    predicted_value = ml_model.predict(feature_df)
+    if ML != 'NN':
+        feature_df = pd.DataFrame([feature_dict])
+        predicted_value = ml_model.predict(feature_df)
+    else: # NN requires pre-normalization of the data
+        dataset= pd.read_csv(
+            '../energyforecaster/data/no_0_solar_with_interpolation.csv')[feature_dict.keys()]
+        dataset=dataset.append(pd.DataFrame([feature_dict]), ignore_index=True)
+        scaler = preprocessing.StandardScaler()
+        X_normalized = scaler.fit_transform(dataset)
+        feature_vector = X_normalized[-1].reshape(1,-1)
+        predicted_value = ml_model.predict(feature_vector)
 
     print("\nPredicted Value: ")
     return predicted_value * capacity
