@@ -8,5 +8,15 @@ User Cases:
 2. Chris is able to get the real-time solar generation value by choosing his location, inputting his capacity, and selecting his preferred machine learning algorithm. However, because Chris wants to "predict" the solar generation and prepare the coal power plants, he decides to fork the EnergyForecaster package in order to change our real-time weather to the weather forecast data that he has access to. Chris realized that, because the machine learning algorithm only requires the historical data, there is no limitation on using the package as a forecasting tool.
 
 Components Specification:
-1. User Interface (Command Line?)
-    -
+1. User Interface 
+	- Name: energyforecast.py
+	- Function: receives input from user and outputs a single value of real-time solar generation data
+	- Inputs: Location (String), capacity (int, float), Machine Learning Method (String)
+	- Outputs: Real-Time solar generation data (float)
+	- Interaction with other component:  Works with the machine learning algorithms
+2. Machine Learning Algorithms
+	- Name: Methods within submodule
+	- Function: receives input from the energyforecast.py
+	- Inputs: x_columns (list) - list of available parameters for the real-time data
+	- Outputs: Machine Learning Model (classes)
+	- Interaction with other component:  Returns value to the energyforecast.py
