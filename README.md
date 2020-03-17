@@ -9,56 +9,56 @@ The objective is to give a real-time feedback of generated solar power based on 
 
 ## Directory
 doc:
-    * Energy_forecasters_project_proposal.pptx
-    * Project Flow.png
-    * Technology Review.pdf
-    * user_cases.txt
+* Energy_forecasters_project_proposal.pptx
+* Project Flow.png
+* Technology Review.pdf
+* user_cases.txt
 
 Energyforecaster:
-    * data:  
-        * cleaned_solar_generation_data.csv
-        * no_0_solar_with_interpolation.csv
-        * normalized_by_2000_dtpts.csv
-        * out_with_interpolation.csv
-        * processed_data.csv
-        * Texas_weather_solar_generation_data_2013-2018.csv
-    * submodule:
-        * LR.py  
-        * MLR.py  
-        * NN.py  
-        * RF.py  
-        * RR.py  
-    * tests:  
-        * test_energyforecast.py  
-    * energyforecast.py
+* data:  
+    * cleaned_solar_generation_data.csv
+    * no_0_solar_with_interpolation.csv
+    * normalized_by_2000_dtpts.csv
+    * out_with_interpolation.csv
+    * processed_data.csv
+    * Texas_weather_solar_generation_data_2013-2018.csv
+* submodule:
+    * LR.py  
+    * MLR.py  
+    * NN.py  
+    * RF.py  
+    * RR.py  
+* tests:  
+    * test_energyforecast.py  
+* energyforecast.py
 
 examples:
-    * data_cleaning:
-        * data_combining.ipynb
-        * Fuel_Mix_data_cleaning.ipynb
-    * fuel_generation_data:  
-        * IntGenByFuel2007.xls ~ IntGenByFuel2019.xls
-        * cleaned_solar_generation_data.csv
-    * nrel_weather_data:  
-        * 734232_29.77_-95.38_2007.csv ~ 734232_29.77_-95.38_2018.csv
-    * nrel_weather_webscrape:  
-        * NREL_weather_data_webscrape.ipynb
-    * regression_methods:  
-        * feature_selection_multilinear_regression_and_kfold.ipynb
-        * LassoRegression.ipynb
-        * MLR_kfold_CV.py
-        * Neural_Network.ipynb
-        * RandomForest_Regression.ipynb
-        * RF_evaluation.py
-        * RF_kfold_CV.py
-        * RidgeRegression.ipynb
-    * example.py
-LICENSE  
-README.md  
+* data_cleaning:
+    * data_combining.ipynb
+    * Fuel_Mix_data_cleaning.ipynb
+* fuel_generation_data:  
+    * IntGenByFuel2007.xls ~ IntGenByFuel2019.xls
+    * cleaned_solar_generation_data.csv
+* nrel_weather_data:  
+    * 734232_29.77_-95.38_2007.csv ~ 734232_29.77_-95.38_2018.csv
+* nrel_weather_webscrape:  
+    * NREL_weather_data_webscrape.ipynb
+* regression_methods:  
+    * feature_selection_multilinear_regression_and_kfold.ipynb
+    * LassoRegression.ipynb
+    * MLR_kfold_CV.py
+    * Neural_Network.ipynb
+    * RandomForest_Regression.ipynb
+    * RF_evaluation.py
+    * RF_kfold_CV.py
+    * RidgeRegression.ipynb
+* example.py
+LICENSE
+README.md
 environment.yml
 .gitignore
 .coveragerc
-logo.png  
+logo.png
 setup.py
 
 ## Getting Started
