@@ -3,7 +3,7 @@ import sys
 # Required to import packages from other directory
 sys.path.insert(1, "./energyforecaster/")
 
-import energyforecast
+import energyforecaster
 
 '''
     Available Locations:
@@ -26,4 +26,4 @@ import energyforecast
 capacity = 1
 for location in ["BMS", "STAC", "UOSMRL", "VTIF"]:
     for ML in ["MLR", "LR", "RR", "RF", "NN"]:
-        print(energyforecast.live_predict(location, capacity, ML))
+        print(energyforecaster.live_predict(location, capacity, ML))
