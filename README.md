@@ -8,13 +8,13 @@ This is a class project for University of Washington DIRECT program in Winter 20
 The objective is to give a real-time feedback of generated solar power based on regression models from historical data. The user must choose one of six weather observation stations, input the capacity, and choose one of five regression methods, which include Random Forest, Neural Network, Multi Linear, Lasso, and Ridge regression.
 
 ## Directory
-* doc:
+doc:
     * Energy_forecasters_project_proposal.pptx
     * Project Flow.png
     * Technology Review.pdf
     * user_cases.txt
 
-* Energyforecaster:
+Energyforecaster:
     * data:  
         * cleaned_solar_generation_data.csv
         * no_0_solar_with_interpolation.csv
@@ -32,7 +32,7 @@ The objective is to give a real-time feedback of generated solar power based on 
         * test_energyforecast.py  
     * energyforecast.py
 
-* examples:
+examples:
     * data_cleaning:
         * data_combining.ipynb
         * Fuel_Mix_data_cleaning.ipynb
@@ -53,13 +53,13 @@ The objective is to give a real-time feedback of generated solar power based on 
         * RF_kfold_CV.py
         * RidgeRegression.ipynb
     * example.py
-* LICENSE  
-* README.md  
-* environment.yml
-* .gitignore
-* .coveragerc
-* logo.png  
-* setup.py
+LICENSE  
+README.md  
+environment.yml
+.gitignore
+.coveragerc
+logo.png  
+setup.py
 
 ## Getting Started
 
