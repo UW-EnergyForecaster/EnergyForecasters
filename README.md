@@ -53,12 +53,19 @@ examples:
     * RF_kfold_CV.py
     * RidgeRegression.ipynb
 * example.py
+
 LICENSE
+
 README.md
+
 environment.yml
+
 .gitignore
+
 .coveragerc
+
 logo.png
+
 setup.py
 
 ## Getting Started
