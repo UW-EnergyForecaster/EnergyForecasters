@@ -67,8 +67,7 @@ By following the below procedures, prediction of real time solar energy output i
 
 ### Prerequisites
 
-Windows user: Windows preview, Ubuntu  
-              <p>An <a href="https://towardsdatascience.com/setting-up-a-data-science-environment-using-windows-subsystem-for-linux-wsl-c4b390803dd">Instructions</a>.</p>
+Windows user: Windows preview, Ubuntu  <a href="https://towardsdatascience.com/setting-up-a-data-science-environment-using-windows-subsystem-for-linux-wsl-c4b390803dd">Instructions</a>
 
 Mac OS: Terminal  
 
@@ -87,7 +86,6 @@ Beside the raw data, pre-cleaning process of data is necessary since not all the
 1. git clone https://github.com/UW-EnergyForecaster/EnergyForecasters
 2. open energyforecaster file
 3. pip install noise
-4.
 
 ### Module code
 
@@ -120,7 +118,7 @@ This project is following PEP8 style using the flake8 code checker.
 
 * **Daniel Chai** - **MS, Materials Science**
 * **Xinyue Wang** - **MS, Materials Science**
-* **Zhang Le** - **PhD, Chemical Engineering**
+* **Zang Le** - **PhD, Chemical Engineering**
 * **Ruidong Ma** - **MS, Mechanical Engineering**
 
 
