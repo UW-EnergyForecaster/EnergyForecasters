@@ -33,7 +33,8 @@ def model(x_columns):
 
     # Splitting the data
     no0_x_train, no0_x_test, no0_y_train, no0_y_test = train_test_split(
-        no0_data[x_columns], no0_data[y_column], test_size=0.33)
+        no0_data[x_columns], no0_data[y_column],
+        test_size=0.33)
 
     # The random forest regressor model
     no0_forest = RandomForestRegressor(n_estimators=100)

@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="energyforecaster", # Replace with your own username
+    name="energyforecaster",
     version="0.0.1",
     author="Daniel Chai",
     author_email="dc8291@gmail.com",

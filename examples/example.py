@@ -20,7 +20,7 @@ import energyforecaster
         2. LR: Lasso Regression
         3. RR: Ridge Regression
         4. RF: RandomForest Regressor
-        5. NN: Neural Network
+        5. NN: Neural Network - Recommended
 '''
 
 capacity = 1

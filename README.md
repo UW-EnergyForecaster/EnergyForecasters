@@ -56,12 +56,19 @@ Windows user: Windows preview, Ubuntu  <a href="https://towardsdatascience.com/s
 
 Mac OS: Terminal
 
+#### Dependencies:
+* requests
+* pandas
+* numpy
+* sklearn
+* re
+
 
 ### Installing
 
-1. git clone https://github.com/UW-EnergyForecaster/EnergyForecasters
-2. open energyforecaster file
-3. pip install noise
+1. git clone https://github.com/UW-EnergyForecaster/EnergyForecasters.git
+2.
+3.
 
 ### Module code
 
@@ -94,8 +101,8 @@ NOTE: tests must be run in the root directory due to pathing errors in the submo
 This project is following PEP8 style using the [flake8](https://flake8.pycqa.org/en/latest/) code checker.
 
 ## Built With
-* **Google colaboratory** - Jupyter notebook online version
-* **sklearn** - Feature selection,Prediction model
+* **Google Colaboratory** - Jupyter notebook online version
+* **sklearn** - Feature selection, Prediction model
 
 
 ## Authors

@@ -29,7 +29,7 @@ def live_predict(location, capacity, ML):
             2. LR: Lasso Regression
             3. RR: Ridge Regression
             4. RF: RandomForest Regressor
-            5. NN: Neural Network
+            5. NN: Neural Network - Recommended
 
         :param location: One of the sites with readily available data
         :param capacity: User's own solar capacity
@@ -67,7 +67,7 @@ def live_predict(location, capacity, ML):
     else:
         pass
 
-    print("Obtaining real-time weather data...")
+    print("\nObtaining real-time weather data...")
     # Attempting to receive real-time data
     url = 'https://midcdmz.nrel.gov/apps/daily.pl?site='+location+'&live=1'
     response = requests.get(url)
@@ -86,7 +86,7 @@ def live_predict(location, capacity, ML):
             # Properties that we want
             feature_list = ['Global', 'Direct', 'Diffuse', 'Wind Direction',
                             'Wind Speed', 'Zenith', 'Albedo', 'Relative\
-                            Humidity', 'Air Temperature', 'Pressure']
+                            Humidity', 'Temp', 'Pressure']
             for feature in feature_list:
                 if feature in line:
                     result = re.findall(r"[-+]?\d+\.\d+", line)
@@ -134,12 +134,19 @@ def live_predict(location, capacity, ML):
         predicted_value = ml_model.predict(feature_df)
     else: # NN requires pre-normalization of the data
         dataset= pd.read_csv(
-            '../energyforecaster/data/no_0_solar_with_interpolation.csv')[feature_dict.keys()]
+            './energyforecaster/data/no_0_solar_with_interpolation.csv')[feature_dict.keys()]
         dataset=dataset.append(pd.DataFrame([feature_dict]), ignore_index=True)
         scaler = preprocessing.StandardScaler()
         X_normalized = scaler.fit_transform(dataset)
         feature_vector = X_normalized[-1].reshape(1,-1)
         predicted_value = ml_model.predict(feature_vector)
 
-    print("\nPredicted Value: ")
+
+    if predicted_value < 0:
+        predicted_value = [0.0]
+
+    print("Location Selected: ", location)
+    print("Capacity(MW): ", capacity)
+    print("Algorithm Selected: ", ML)
+    print("Predicted Value: ")
     return predicted_value * capacity
