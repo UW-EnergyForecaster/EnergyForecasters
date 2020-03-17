@@ -93,11 +93,6 @@ NOTE: tests must be run in the root directory due to pathing errors in the submo
 ### Style Tests
 This project is following PEP8 style using the [flake8](https://flake8.pycqa.org/en/latest/) code checker.
 
-### Template
-
-
-
-
 ## Built With
 * **Google colaboratory** - Jupyter notebook online version
 * **sklearn** - Feature selection,Prediction model
