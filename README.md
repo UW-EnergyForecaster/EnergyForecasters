@@ -52,14 +52,14 @@ The objective is to give a real-time feedback of generated solar power based on 
         * RF_evaluation.py
         * RF_kfold_CV.py
         * RidgeRegression.ipynb
-    example.py
-LICENSE  
-README.md  
-environment.yml
-.gitignore
-.coveragerc
-logo.png  
-setup.py
+    * example.py
+* LICENSE  
+* README.md  
+* environment.yml
+* .gitignore
+* .coveragerc
+* logo.png  
+* setup.py
 
 ## Getting Started
 
