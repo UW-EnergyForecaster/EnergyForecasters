@@ -67,8 +67,9 @@ Mac OS: Terminal
 ### Installing
 
 1. git clone https://github.com/UW-EnergyForecaster/EnergyForecasters.git
-2.
-3.
+2. cd `EnergyForecasters` (root directory)
+3. You must import the `energyforecaster` path, as shown in the example.py
+4. The tests must be run in the root directory.
 
 ### Module code
 
