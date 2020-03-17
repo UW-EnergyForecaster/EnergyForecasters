@@ -67,7 +67,7 @@ By following the below procedures, prediction of real time solar energy output i
 
 ### Prerequisites
 
-Windows user: Windows preview, Ubuntu<p>An <a href="https://towardsdatascience.com/setting-up-a-data-science-environment-using-windows-subsystem-for-linux-wsl-c4b390803dd">Instructions</a>.</p>
+Windows user: Windows preview, Ubuntu  An <a href="https://towardsdatascience.com/setting-up-a-data-science-environment-using-windows-subsystem-for-linux-wsl-c4b390803dd">Instructions</a>
 
 Mac OS: Terminal  
 
