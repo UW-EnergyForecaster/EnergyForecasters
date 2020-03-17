@@ -9,46 +9,44 @@ The objective is to give a real-time feedback of generated solar power based on 
 
 ## Organization
 
-
-EnergyForecaster/
-    |- doc/
-        |- Energy_forecasters_project_proposal.pptx
-        |- Project Flow.png
-        |- Technology Review.pdf
-        |- user_cases.txt
-    |- Energyforecaster/
-        |- data/
-            |- no_0_solar_with_interpolation.csv
-            |- ...
-        |- submodule/
-            |- LR.py  
-            |- MLR.py  
-            |- NN.py  
-            |- RF.py  
-            |- RR.py  
-        |- tests/
-            |- test_energyforecast.py  
-        |- energyforecaster.py
-    |- examples/
-        |- data_cleaning/
-            |- ...
-        |- fuel_generation_data/
-            |- ...
-        |- nrel_weather_data/
-            |- ...
-        |- nrel_weather_webscrape/
-            |- ...
-        |- regression_methods/
-            |- ...
-        |- example.py
-    |- LICENSE
-    |- README.md
-    |- environment.yml
-    |- .gitignore
-    |- .coveragerc
-    |- logo.png
-    |- setup.py
-
+    EnergyForecaster/
+        |- doc/
+            |- Energy_forecasters_project_proposal.pptx
+            |- Project Flow.png
+            |- Technology Review.pdf
+            |- user_cases.txt
+        |- Energyforecaster/
+            |- data/
+                |- no_0_solar_with_interpolation.csv
+                |- ...
+            |- submodule/
+                |- LR.py
+                |- MLR.py
+                |- NN.py
+                |- RF.py
+                |- RR.py
+            |- tests/
+                |- test_energyforecast.py
+            |- energyforecaster.py
+        |- examples/
+            |- data_cleaning/
+                |- ...
+            |- fuel_generation_data/
+                |- ...
+            |- nrel_weather_data/
+                |- ...
+            |- nrel_weather_webscrape/
+                |- ...
+            |- regression_methods/
+                |- ...
+            |- example.py
+        |- LICENSE
+        |- README.md
+        |- environment.yml
+        |- .gitignore
+        |- .coveragerc
+        |- logo.png
+        |- setup.py
 
 ## Getting Started
 
@@ -56,10 +54,10 @@ EnergyForecaster/
 
 Windows user: Windows preview, Ubuntu  <a href="https://towardsdatascience.com/setting-up-a-data-science-environment-using-windows-subsystem-for-linux-wsl-c4b390803dd">Instructions</a>
 
-Mac OS: Terminal  
+Mac OS: Terminal
 
 
-### Installing  
+### Installing
 
 1. git clone https://github.com/UW-EnergyForecaster/EnergyForecasters
 2. open energyforecaster file
